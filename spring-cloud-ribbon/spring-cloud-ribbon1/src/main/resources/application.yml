@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8083
 eureka:
   client:
     register-with-eureka: true
@@ -9,4 +9,8 @@ eureka:
     should-unregister-on-shutdown: true
 spring:
   application:
-    name: eureka-client
+    name: eureka-client-ribbon
+# 设置调用eureka-client时使用随机策略
+eureka-client:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule

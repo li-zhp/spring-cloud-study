@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8084
 eureka:
   client:
     register-with-eureka: true
@@ -9,4 +9,4 @@ eureka:
     should-unregister-on-shutdown: true
 spring:
   application:
-    name: eureka-client
+    name: eureka-client-ribbon
