@@ -1,0 +1,17 @@
+server:
+  port: 8085
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+spring:
+  application:
+    name: zuul
+zuul:
+  routes:
+    eureka-client:
+      path: /eureka-client/**
+      serviceId: eureka-client
+    baidu:
+      path: /baidu/**
+      url: https://www.baidu.com/
