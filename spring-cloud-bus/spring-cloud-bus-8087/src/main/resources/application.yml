@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: kafka-producer
+  kafka:
+    bootstrap-servers: 172.16.11.132:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+    should-unregister-on-shutdown: true
+server:
+  port: 8087

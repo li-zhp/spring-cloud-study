@@ -1,0 +1,18 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: kafka-listener
+  kafka:
+    bootstrap-servers: 172.16.11.132:9092
+    consumer:
+      group-id: test-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
+    should-unregister-on-shutdown: true
